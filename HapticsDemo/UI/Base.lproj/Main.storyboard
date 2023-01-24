@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBx-BS-ani">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Haptics-->
+        <scene sceneID="bfM-Gl-hVY">
+            <objects>
+                <viewController id="94a-6s-3nZ" customClass="HapticsDemoViewController" customModule="HapticsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j92-7z-ypi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BUP-X0-wxk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Haptics" image="iphone.gen3.radiowaves.left.and.right" catalog="system" id="6VA-fs-hHX"/>
+                    <navigationItem key="navigationItem" id="erW-Iw-yQR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HbE-dm-5eQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2282" y="-48"/>
+        </scene>
+        <!--Shake-->
+        <scene sceneID="8DD-Zv-kvL">
+            <objects>
+                <viewController id="fYa-o9-Adt" customClass="ShakableDemoViewController" customModule="HapticsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3N-3Z-5rP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gHi-To-zEQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shake" image="bell.and.waves.left.and.right.fill" catalog="system" id="seJ-44-qGT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2b-6q-YHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2282" y="715"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vFA-pC-2fe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VWC-j0-sEw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7va-Wy-OWd"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wVG-R8-tGC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="94a-6s-3nZ" kind="relationship" relationship="viewControllers" id="qQV-qP-fM9"/>
+                        <segue destination="fYa-o9-Adt" kind="relationship" relationship="viewControllers" id="8TE-Qj-Fql"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wl1-5b-2kV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.2824427480916" y="353.52112676056339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JpD-Xt-FKR">
+            <objects>
+                <navigationController id="aBx-BS-ani" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bGC-hb-Tay">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VWC-j0-sEw" kind="relationship" relationship="rootViewController" id="rjJ-zX-HSZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzU-UG-LYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell.and.waves.left.and.right.fill" catalog="system" width="128" height="77"/>
+        <image name="iphone.gen3.radiowaves.left.and.right" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
